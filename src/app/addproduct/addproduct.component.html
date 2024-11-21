@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="text-danger">Add Items</h1>
+            <form action="" [formGroup]="addproductsform" (ngSubmit)="addproduct()">
+
+                <div class="form-group"><label for="" class="form-label">productId</label><input type="text" class="form-control" formControlName="productId"></div>
+                <div class="form-group"><label for="" class="form-label">ProductName</label><input type="text" class="form-control" formControlName="productName"></div>
+                <div class="form-group"><label for="" class="form-label">productDescription</label><input type="text" class="form-control" formControlName="productDescription"></div>
+                <div class="form-group"><label for="" class="form-label">productPrice</label><input type="text" class="form-control" formControlName="productPrice"></div>
+                <div class="form-group"><label for="" class="form-label">productImage</label><input type="text" class="form-control" formControlName="productImg"></div>
+                <div class="form-group"><label for="" class="form-label">productCategory</label><input type="text" class="form-control" formControlName="productCategory"></div>
+                <div class="form-group">
+                    <button type="submit" [disabled]="!addproductsform.valid" class="btn btn-success mt-2">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>

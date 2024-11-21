@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let p of products">
+            <div class="card m-2">
+                <div class="card-head">
+                 <img [src]="p.productImg" alt="" height="300" width="300">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{p.productName}}</h3>
+                    <h5 class="card-title">{{p.productPrice|currency:'INR'}}</h5>
+                    <p class="card-text">{{p.productDescription}}</p>
+                </div>
+                <div class="card-footer mt-2">
+                    <button class="btn btn-warning me-2" (click)="selectedItems(p)" data-bs-target="#mymodal" data-bs-toggle="modal">Edit</button>
+                    <button class="btn btn-danger" (click)="deletenow(p.productId)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="" *ngIf="updatedpro">
+    <div class="modal  fade" id="mymodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" >
+                        <div class="form-group"><label for="" class="form-label">ProductName</label><input type="text" name="productName" class="form-control" [(ngModel)]="updatedpro.productName"></div>
+                        <div class="form-group"><label for="" class="form-label"></label><input type="text" class="form-control"></div>
+                        <button class="btn btn-success" data-bs-dismiss="modal" (click)="updatenow()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

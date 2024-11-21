@@ -1,0 +1,18 @@
+<nav class="navbar bg-dark navbar-expand-md navbar-dark">
+    <div class="container-fluid">
+        <a routerLink="#" class="navbar-brand">Ecom Express</a>
+        <button class="navbar-toggler" data-bs-target="#mynav" data-bs-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="mynav">
+            <ul class="navbar-nav ms-auto  d-flex justify-content-center align-items-center">
+                <li class="nav-item"><a routerLink="/user" class="nav-link">Home</a></li>
+                <li class="nav-item"><a routerLink="/user/product" class="nav-link">View Product</a></li>
+                <li class="nav-item"><a routerLink="/user/manage" class="nav-link">Manage Products</a></li>
+                <li class="nav-item"><a routerLink="/user/add" class="nav-link">Add Products</a></li>
+                <li class="nav-item"><a routerLink="/user/api" class="nav-link">API Products</a></li>
+                <li class="nav-item"><a routerLink="/user/filter" class="nav-link">Filtered Products</a></li>
+                <li class="nav-item"><a routerLink="#" class="nav-link" (click)="logout()">Log off</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>
